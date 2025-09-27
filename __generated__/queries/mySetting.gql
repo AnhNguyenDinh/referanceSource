@@ -1,0 +1,9 @@
+query mySetting {
+  mySetting {
+    allowAccessCamera
+    allowAccessPhoto
+    allowLocation
+    allowNotification
+    id
+  }
+}

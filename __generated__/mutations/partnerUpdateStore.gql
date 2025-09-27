@@ -1,0 +1,31 @@
+mutation partnerUpdateStore($input: UpdateStoreInput!) {
+  partnerUpdateStore(input: $input) {
+    address
+    avatar {
+      createdAt
+      fileSize
+      fullOriginalUrl
+      fullThumbUrl
+      id
+      isDeleted
+      mimeType
+      name
+      originalUrl
+      ownerId
+      thumbUrl
+      type
+      updatedAt
+      videoUrl
+    }
+    avatarId
+    createdAt
+    deletedAt
+    description
+    email
+    id
+    name
+    partnerId
+    phoneNumber
+    updatedAt
+  }
+}

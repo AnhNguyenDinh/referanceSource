@@ -1,0 +1,3 @@
+mutation adminCreateInstruction($input: CreateInstructionInput!) {
+  adminCreateInstruction(input: $input)
+}

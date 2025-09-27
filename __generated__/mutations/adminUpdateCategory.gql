@@ -1,0 +1,11 @@
+mutation adminUpdateCategory($input: UpdateCategoryInput!) {
+  adminUpdateCategory(input: $input) {
+    createdAt
+    deletedAt
+    id
+    isActive
+    name
+    type
+    updatedAt
+  }
+}

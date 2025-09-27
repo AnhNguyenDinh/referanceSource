@@ -1,0 +1,37 @@
+query adminGetSubmitResult(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+  $surveyId: String!
+  $type: SurveyHistoryType!
+  $userId: String!
+) {
+  adminGetSubmitResult(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+    surveyId: $surveyId
+    type: $type
+    userId: $userId
+  ) {
+    createdAt
+    deletedAt
+    id
+    results {
+      answer
+      questionId
+    }
+    surveyId
+    type
+    updatedAt
+    userId
+  }
+}

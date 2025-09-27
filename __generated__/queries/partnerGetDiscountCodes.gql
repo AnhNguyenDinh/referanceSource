@@ -1,0 +1,124 @@
+query partnerGetDiscountCodes(
+  $endDate: String
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isActivities: Boolean!
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+  $startDate: String
+) {
+  partnerGetDiscountCodes(
+    endDate: $endDate
+    filters: $filters
+    isActive: $isActive
+    isActivities: $isActivities
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+    startDate: $startDate
+  ) {
+    items {
+      admin {
+        address
+        addressMoreInfo
+        avatarId
+        birthday
+        createdAt
+        deletedAt
+        email
+        fullname
+        id
+        isActive
+        type
+        updatedAt
+      }
+      adminId
+      createdAt
+      deletedAt
+      endDate
+      id
+      isActive
+      isAssignAllProduct
+      limit
+      limitPerAccount
+      minOrderValue
+      name
+      partner {
+        addressMoreInfo
+        avatarId
+        bank
+        birthday
+        cardNumber
+        citizenId
+        countProduct
+        countTechnician
+        createdAt
+        deletedAt
+        description
+        email
+        fullname
+        hotline
+        id
+        isActive
+        isAdmin
+        isApproved
+        latitude
+        longitude
+        mapAddress
+        menus
+        parentId
+        phone
+        star
+        storeStar
+        suggestionPoint
+        type
+        updatedAt
+      }
+      partnerId
+      products {
+        avatarId
+        createdAt
+        deletedAt
+        descriptionImageIds
+        detail
+        id
+        isActive
+        isFavorite
+        isFixedCost
+        isNew
+        name
+        operatingNumber
+        operatingUnit
+        ordinalNumber
+        partNumber
+        partnerId
+        quantity
+        serialNumber
+        star
+        type
+        unitPrice
+        updatedAt
+        vehicleRegistrationPlate
+        vinNumber
+        yearOfManufacture
+      }
+      startDate
+      unit
+      updatedAt
+      usedCount
+      value
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

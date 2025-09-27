@@ -1,0 +1,36 @@
+diff --git a/node_modules/@twotalltotems/react-native-otp-input/index.d.ts b/node_modules/@twotalltotems/react-native-otp-input/index.d.ts
+index aec5d5b..8aeeeac 100644
+--- a/node_modules/@twotalltotems/react-native-otp-input/index.d.ts
++++ b/node_modules/@twotalltotems/react-native-otp-input/index.d.ts
+@@ -5,7 +5,7 @@
+ 
+ declare module '@twotalltotems/react-native-otp-input' {
+   import * as React from 'react'
+-  import { TextStyle, ViewStyle } from 'react-native';
++  import { TextStyle, ViewStyle, StyleProp } from 'react-native';
+ 
+   /**
+    * Define types of keyboard
+@@ -22,11 +22,11 @@ declare module '@twotalltotems/react-native-otp-input' {
+     /**
+      * Style of the input fields
+      */
+-    codeInputFieldStyle?: TextStyle;
++    codeInputFieldStyle?: StyleProp<TextStyle>;
+     /**
+      * Style of highlighted status for input fields
+      */
+-    codeInputHighlightStyle?: TextStyle;
++    codeInputHighlightStyle?: StyleProp<TextStyle>;
+     /**
+      * Callback function
+      * Trigger when all fields of the OTP has been filled
+@@ -72,7 +72,7 @@ declare module '@twotalltotems/react-native-otp-input' {
+     /**
+      * Style of the OTP container view
+      */
+-    style?: ViewStyle;
++    style?: StyleProp<ViewStyle>;
+     /**
+      * The highlight (and cursor on iOS) color of the text input.
+      */

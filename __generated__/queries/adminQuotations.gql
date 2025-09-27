@@ -1,0 +1,170 @@
+query adminQuotations(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+  $statuses: [QuotationStatusEnum!]
+) {
+  adminQuotations(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+    statuses: $statuses
+  ) {
+    items {
+      accessories {
+        available
+        createdAt
+        deletedAt
+        id
+        name
+        quantity
+        quotationId
+        unit
+        unitPrice
+        updatedAt
+      }
+      additionalFees {
+        amount
+        createdAt
+        deletedAt
+        id
+        name
+        quotationId
+        updatedAt
+      }
+      booking {
+        addressMoreInfo
+        code
+        createdAt
+        deletedAt
+        description
+        id
+        latitude
+        longitude
+        mapAddress
+        partnerId
+        problemTexts
+        scheduleReason
+        scheduleTime
+        status
+        technicianCanReviewUser
+        technicianId
+        transportDistance
+        transportDuration
+        transportFee
+        updatedAt
+        userCanReviewAgency
+        userCanReviewTechnician
+        userId
+        vehicleId
+      }
+      bookingId
+      createdAt
+      deletedAt
+      diagnosisFee
+      diagnosisNote
+      diagnostics {
+        createdAt
+        deletedAt
+        description
+        diagnosticCode
+        expense
+        id
+        quotationId
+        quotationPriceListId
+        updatedAt
+        workingHour
+      }
+      estimatedCompleteAt
+      id
+      operatingNumber
+      operatingUnit
+      reasons {
+        createdAt
+        deletedAt
+        id
+        isActive
+        name
+        type
+        updatedAt
+      }
+      rejectReasons
+      repairFee
+      status
+      technician {
+        addressMoreInfo
+        avatarId
+        bank
+        birthday
+        cardNumber
+        citizenId
+        countProduct
+        countTechnician
+        createdAt
+        deletedAt
+        description
+        email
+        fullname
+        hotline
+        id
+        isActive
+        isAdmin
+        isApproved
+        latitude
+        longitude
+        mapAddress
+        menus
+        parentId
+        phone
+        star
+        storeStar
+        suggestionPoint
+        type
+        updatedAt
+      }
+      technicianId
+      total
+      transportFee
+      updatedAt
+      user {
+        address
+        avatarId
+        birthday
+        certificate
+        createdAt
+        deletedAt
+        email
+        fullname
+        id
+        isActive
+        numberBooking
+        numberMaintenance
+        numberOrder
+        phone
+        star
+        totalBookings
+        totalMaintenanceRequests
+        totalOrders
+        totalPayment
+        totalSpending
+        updatedAt
+      }
+      userId
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

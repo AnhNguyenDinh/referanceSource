@@ -1,0 +1,6 @@
+query partnerGetStartInfo($reviewObject: String!) {
+  partnerGetStartInfo(reviewObject: $reviewObject) {
+    star
+    total
+  }
+}

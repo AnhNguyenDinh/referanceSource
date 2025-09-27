@@ -1,0 +1,31 @@
+query adminGetInstruction($id: String!) {
+  adminGetInstruction(id: $id) {
+    createdAt
+    deletedAt
+    description
+    guide {
+      createdAt
+      deletedAt
+      description
+      id
+      instructions {
+        createdAt
+        deletedAt
+        description
+        guideId
+        id
+        isActive
+        name
+        updatedAt
+      }
+      isActive
+      name
+      updatedAt
+    }
+    guideId
+    id
+    isActive
+    name
+    updatedAt
+  }
+}

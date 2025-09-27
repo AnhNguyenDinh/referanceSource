@@ -1,0 +1,3 @@
+mutation deleteQuotationPriceList($input: DeleteQuotationPriceListInput!) {
+  deleteQuotationPriceList(input: $input)
+}

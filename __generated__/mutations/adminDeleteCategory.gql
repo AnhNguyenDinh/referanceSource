@@ -1,0 +1,3 @@
+mutation adminDeleteCategory($input: DeleteCategoryInput!) {
+  adminDeleteCategory(input: $input)
+}

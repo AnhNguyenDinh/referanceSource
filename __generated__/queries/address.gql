@@ -1,0 +1,17 @@
+query address($id: String!) {
+  address(id: $id) {
+    addressDetail
+    addressName
+    contactName
+    contactPhone
+    createdAt
+    deletedAt
+    id
+    isDefault
+    latitude
+    longitude
+    mapAddress
+    updatedAt
+    userId
+  }
+}

@@ -1,0 +1,32 @@
+query meAdmin {
+  meAdmin {
+    address
+    addressMoreInfo
+    avatar {
+      createdAt
+      fileSize
+      fullOriginalUrl
+      fullThumbUrl
+      id
+      isDeleted
+      mimeType
+      name
+      originalUrl
+      ownerId
+      thumbUrl
+      type
+      updatedAt
+      videoUrl
+    }
+    avatarId
+    birthday
+    createdAt
+    deletedAt
+    email
+    fullname
+    id
+    isActive
+    type
+    updatedAt
+  }
+}

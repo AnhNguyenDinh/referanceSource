@@ -1,0 +1,47 @@
+mutation adminUpdateDocument($input: UpdateDocumentInput!) {
+  adminUpdateDocument(input: $input) {
+    createdAt
+    deletedAt
+    fileIds
+    files {
+      createdAt
+      fileSize
+      fullOriginalUrl
+      fullThumbUrl
+      id
+      isDeleted
+      mimeType
+      name
+      originalUrl
+      ownerId
+      thumbUrl
+      type
+      updatedAt
+      videoUrl
+    }
+    id
+    isActive
+    name
+    reference {
+      createdAt
+      deletedAt
+      description
+      documents {
+        createdAt
+        deletedAt
+        fileIds
+        id
+        isActive
+        name
+        referenceId
+        updatedAt
+      }
+      id
+      isActive
+      name
+      updatedAt
+    }
+    referenceId
+    updatedAt
+  }
+}

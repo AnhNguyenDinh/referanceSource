@@ -1,0 +1,3 @@
+mutation adminCreateSurvey($input: CreateSurveyInput!) {
+  adminCreateSurvey(input: $input)
+}

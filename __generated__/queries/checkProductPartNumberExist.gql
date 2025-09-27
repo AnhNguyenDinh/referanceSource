@@ -1,0 +1,3 @@
+query checkProductPartNumberExist($id: String, $partNumber: String!) {
+  checkProductPartNumberExist(id: $id, partNumber: $partNumber)
+}

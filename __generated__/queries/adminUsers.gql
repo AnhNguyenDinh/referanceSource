@@ -1,0 +1,65 @@
+query adminUsers($input: AdminUserPaginationInput!) {
+  adminUsers(input: $input) {
+    items {
+      address
+      avatar {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      avatarId
+      birthday
+      certificate
+      createdAt
+      deletedAt
+      email
+      fullname
+      id
+      isActive
+      numberBooking
+      numberMaintenance
+      numberOrder
+      phone
+      star
+      totalBookings
+      totalMaintenanceRequests
+      totalOrders
+      totalPayment
+      totalSpending
+      updatedAt
+      userAddress {
+        addressDetail
+        addressName
+        contactName
+        contactPhone
+        createdAt
+        deletedAt
+        id
+        isDefault
+        latitude
+        longitude
+        mapAddress
+        updatedAt
+        userId
+      }
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

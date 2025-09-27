@@ -1,0 +1,48 @@
+query adminGetInstructions(
+  $filters: [JSONObject!]
+  $guideId: String
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+) {
+  adminGetInstructions(
+    filters: $filters
+    guideId: $guideId
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+  ) {
+    items {
+      createdAt
+      deletedAt
+      description
+      guide {
+        createdAt
+        deletedAt
+        description
+        id
+        isActive
+        name
+        updatedAt
+      }
+      guideId
+      id
+      isActive
+      name
+      updatedAt
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

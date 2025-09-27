@@ -1,0 +1,3 @@
+mutation adminDeleteDocument($input: DeleteDocumentInput!) {
+  adminDeleteDocument(input: $input)
+}

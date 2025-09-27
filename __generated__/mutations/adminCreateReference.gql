@@ -1,0 +1,3 @@
+mutation adminCreateReference($input: CreateReferenceInput!) {
+  adminCreateReference(input: $input)
+}

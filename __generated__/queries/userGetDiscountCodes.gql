@@ -1,0 +1,120 @@
+query userGetDiscountCodes(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $productIds: [String!]!
+  $search: String
+  $sort: SortInput
+) {
+  userGetDiscountCodes(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    productIds: $productIds
+    search: $search
+    sort: $sort
+  ) {
+    items {
+      admin {
+        address
+        addressMoreInfo
+        avatarId
+        birthday
+        createdAt
+        deletedAt
+        email
+        fullname
+        id
+        isActive
+        type
+        updatedAt
+      }
+      adminId
+      createdAt
+      deletedAt
+      endDate
+      id
+      isActive
+      isAssignAllProduct
+      limit
+      limitPerAccount
+      minOrderValue
+      name
+      partner {
+        addressMoreInfo
+        avatarId
+        bank
+        birthday
+        cardNumber
+        citizenId
+        countProduct
+        countTechnician
+        createdAt
+        deletedAt
+        description
+        email
+        fullname
+        hotline
+        id
+        isActive
+        isAdmin
+        isApproved
+        latitude
+        longitude
+        mapAddress
+        menus
+        parentId
+        phone
+        star
+        storeStar
+        suggestionPoint
+        type
+        updatedAt
+      }
+      partnerId
+      products {
+        avatarId
+        createdAt
+        deletedAt
+        descriptionImageIds
+        detail
+        id
+        isActive
+        isFavorite
+        isFixedCost
+        isNew
+        name
+        operatingNumber
+        operatingUnit
+        ordinalNumber
+        partNumber
+        partnerId
+        quantity
+        serialNumber
+        star
+        type
+        unitPrice
+        updatedAt
+        vehicleRegistrationPlate
+        vinNumber
+        yearOfManufacture
+      }
+      startDate
+      unit
+      updatedAt
+      usedCount
+      value
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

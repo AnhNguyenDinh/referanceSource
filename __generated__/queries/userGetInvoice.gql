@@ -1,0 +1,18 @@
+query userGetInvoice($settlementId: String!) {
+  userGetInvoice(settlementId: $settlementId) {
+    createdAt
+    fileSize
+    fullOriginalUrl
+    fullThumbUrl
+    id
+    isDeleted
+    mimeType
+    name
+    originalUrl
+    ownerId
+    thumbUrl
+    type
+    updatedAt
+    videoUrl
+  }
+}

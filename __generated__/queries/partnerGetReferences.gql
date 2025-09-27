@@ -1,0 +1,46 @@
+query partnerGetReferences(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+) {
+  partnerGetReferences(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+  ) {
+    items {
+      createdAt
+      deletedAt
+      description
+      documents {
+        createdAt
+        deletedAt
+        fileIds
+        id
+        isActive
+        name
+        referenceId
+        updatedAt
+      }
+      id
+      isActive
+      name
+      updatedAt
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

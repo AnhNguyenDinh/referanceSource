@@ -1,0 +1,6 @@
+query partnerCountItemByEachPeriod {
+  partnerCountItemByEachPeriod {
+    periodType
+    totalItem
+  }
+}

@@ -1,0 +1,3 @@
+mutation adminDeleteReference($input: DeleteReferenceInput!) {
+  adminDeleteReference(input: $input)
+}

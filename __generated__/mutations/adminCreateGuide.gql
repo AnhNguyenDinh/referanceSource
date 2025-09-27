@@ -1,0 +1,3 @@
+mutation adminCreateGuide($input: CreateGuideInput!) {
+  adminCreateGuide(input: $input)
+}

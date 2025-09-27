@@ -1,0 +1,3 @@
+query checkProductVinExist($id: String, $vinNumber: String!) {
+  checkProductVinExist(id: $id, vinNumber: $vinNumber)
+}

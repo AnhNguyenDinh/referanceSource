@@ -1,0 +1,190 @@
+query adminProducts(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $manufacturerId: String
+  $modelId: String
+  $originId: String
+  $page: Int
+  $search: String
+  $sort: SortInput
+  $type: ProductTypeEnum
+  $vehicleTypeId: String
+) {
+  adminProducts(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    manufacturerId: $manufacturerId
+    modelId: $modelId
+    originId: $originId
+    page: $page
+    search: $search
+    sort: $sort
+    type: $type
+    vehicleTypeId: $vehicleTypeId
+  ) {
+    items {
+      avatar {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      avatarId
+      createdAt
+      deletedAt
+      descriptionImageIds
+      descriptionImages {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      detail
+      id
+      isActive
+      isFavorite
+      isFixedCost
+      isNew
+      manufacturer {
+        createdAt
+        deletedAt
+        id
+        isActive
+        name
+        type
+        updatedAt
+      }
+      model {
+        createdAt
+        deletedAt
+        id
+        isActive
+        name
+        type
+        updatedAt
+      }
+      name
+      operatingNumber
+      operatingUnit
+      ordinalNumber
+      origin {
+        createdAt
+        deletedAt
+        id
+        isActive
+        name
+        type
+        updatedAt
+      }
+      partNumber
+      partOfProduct {
+        createdAt
+        deletedAt
+        id
+        isActive
+        name
+        type
+        updatedAt
+      }
+      partner {
+        addressMoreInfo
+        avatarId
+        bank
+        birthday
+        cardNumber
+        citizenId
+        countProduct
+        countTechnician
+        createdAt
+        deletedAt
+        description
+        email
+        fullname
+        hotline
+        id
+        isActive
+        isAdmin
+        isApproved
+        latitude
+        longitude
+        mapAddress
+        menus
+        parentId
+        phone
+        star
+        storeStar
+        suggestionPoint
+        type
+        updatedAt
+      }
+      partnerId
+      productType {
+        createdAt
+        deletedAt
+        id
+        isActive
+        name
+        type
+        updatedAt
+      }
+      productUnit {
+        createdAt
+        deletedAt
+        id
+        isActive
+        name
+        type
+        updatedAt
+      }
+      quantity
+      reviewSummary {
+        percent
+        starAverage
+        total
+      }
+      serialNumber
+      star
+      starInfo {
+        star
+        total
+      }
+      type
+      unitPrice
+      updatedAt
+      vehicleRegistrationPlate
+      vinNumber
+      yearOfManufacture
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

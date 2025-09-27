@@ -1,0 +1,9 @@
+query adminGetReportDetailOrder($partnerId: String!, $periodType: PeriodTypeEnum!) {
+  adminGetReportDetailOrder(partnerId: $partnerId, periodType: $periodType) {
+    histories {
+      date
+      revenue
+    }
+    totalRevenue
+  }
+}

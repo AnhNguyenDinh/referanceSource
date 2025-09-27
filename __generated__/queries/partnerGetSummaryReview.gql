@@ -1,0 +1,7 @@
+query partnerGetSummaryReview($reviewObject: String!) {
+  partnerGetSummaryReview(reviewObject: $reviewObject) {
+    percent
+    starAverage
+    total
+  }
+}

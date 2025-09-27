@@ -1,0 +1,3 @@
+mutation adminCreateDiscountCode($input: CreateDiscountCodeInput!) {
+  adminCreateDiscountCode(input: $input)
+}

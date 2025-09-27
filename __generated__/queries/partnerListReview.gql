@@ -1,0 +1,99 @@
+query partnerListReview(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $reviewObject: ReviewObjectEnum!
+  $search: String
+  $sort: SortInput
+  $star: Float
+) {
+  partnerListReview(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    reviewObject: $reviewObject
+    search: $search
+    sort: $sort
+    star: $star
+  ) {
+    items {
+      assessorId
+      bookingId
+      comment
+      createdAt
+      deletedAt
+      id
+      orderId
+      partnerAssessor {
+        addressMoreInfo
+        avatarId
+        bank
+        birthday
+        cardNumber
+        citizenId
+        countProduct
+        countTechnician
+        createdAt
+        deletedAt
+        description
+        email
+        fullname
+        hotline
+        id
+        isActive
+        isAdmin
+        isApproved
+        latitude
+        longitude
+        mapAddress
+        menus
+        parentId
+        phone
+        star
+        storeStar
+        suggestionPoint
+        type
+        updatedAt
+      }
+      personEvaluatedId
+      productId
+      star
+      type
+      updatedAt
+      userAssessor {
+        address
+        avatarId
+        birthday
+        certificate
+        createdAt
+        deletedAt
+        email
+        fullname
+        id
+        isActive
+        numberBooking
+        numberMaintenance
+        numberOrder
+        phone
+        star
+        totalBookings
+        totalMaintenanceRequests
+        totalOrders
+        totalPayment
+        totalSpending
+        updatedAt
+      }
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

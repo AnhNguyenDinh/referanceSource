@@ -1,0 +1,16 @@
+query quotationPriceList($id: String!) {
+  quotationPriceList(id: $id) {
+    accessoriesName
+    createdAt
+    deletedAt
+    diagnosticCode
+    expense
+    fixable
+    id
+    isActive
+    updatedAt
+    vehicleType
+    workingCode
+    workingHour
+  }
+}

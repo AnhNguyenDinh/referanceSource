@@ -1,0 +1,64 @@
+query adminGetDocuments(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $referenceId: String
+  $search: String
+  $sort: SortInput
+) {
+  adminGetDocuments(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    referenceId: $referenceId
+    search: $search
+    sort: $sort
+  ) {
+    items {
+      createdAt
+      deletedAt
+      fileIds
+      files {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      id
+      isActive
+      name
+      reference {
+        createdAt
+        deletedAt
+        description
+        id
+        isActive
+        name
+        updatedAt
+      }
+      referenceId
+      updatedAt
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

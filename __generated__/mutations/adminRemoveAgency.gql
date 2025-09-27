@@ -1,0 +1,3 @@
+mutation adminRemoveAgency($id: ID) {
+  adminRemoveAgency(id: $id)
+}

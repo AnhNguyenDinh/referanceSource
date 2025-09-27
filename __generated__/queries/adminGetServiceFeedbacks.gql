@@ -1,0 +1,131 @@
+query adminGetServiceFeedbacks(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+  $status: ServiceFeedbacksStatusEnum
+  $type: ServiceFeedbackTypeEnum
+) {
+  adminGetServiceFeedbacks(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+    status: $status
+    type: $type
+  ) {
+    items {
+      answer
+      content
+      createAt
+      deletedAt
+      id
+      images {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      imagesAnswer {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      imagesAnswerIds
+      imagesIds
+      partner {
+        addressMoreInfo
+        avatarId
+        bank
+        birthday
+        cardNumber
+        citizenId
+        countProduct
+        countTechnician
+        createdAt
+        deletedAt
+        description
+        email
+        fullname
+        hotline
+        id
+        isActive
+        isAdmin
+        isApproved
+        latitude
+        longitude
+        mapAddress
+        menus
+        parentId
+        phone
+        star
+        storeStar
+        suggestionPoint
+        type
+        updatedAt
+      }
+      partnerId
+      status
+      type
+      updateAt
+      user {
+        address
+        avatarId
+        birthday
+        certificate
+        createdAt
+        deletedAt
+        email
+        fullname
+        id
+        isActive
+        numberBooking
+        numberMaintenance
+        numberOrder
+        phone
+        star
+        totalBookings
+        totalMaintenanceRequests
+        totalOrders
+        totalPayment
+        totalSpending
+        updatedAt
+      }
+      userId
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

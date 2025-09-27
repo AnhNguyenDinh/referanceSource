@@ -1,0 +1,65 @@
+query partnerGetStoreProduct(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+  $storeId: String!
+) {
+  partnerGetStoreProduct(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+    storeId: $storeId
+  ) {
+    items {
+      createdAt
+      deletedAt
+      id
+      product {
+        avatarId
+        createdAt
+        deletedAt
+        descriptionImageIds
+        detail
+        id
+        isActive
+        isFavorite
+        isFixedCost
+        isNew
+        name
+        operatingNumber
+        operatingUnit
+        ordinalNumber
+        partNumber
+        partnerId
+        quantity
+        serialNumber
+        star
+        type
+        unitPrice
+        updatedAt
+        vehicleRegistrationPlate
+        vinNumber
+        yearOfManufacture
+      }
+      productId
+      quantity
+      storeId
+      updatedAt
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

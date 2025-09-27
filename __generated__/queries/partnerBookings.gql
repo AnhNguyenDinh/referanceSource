@@ -1,0 +1,274 @@
+query partnerBookings(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+  $statuses: [BookingStatusEnum!]
+) {
+  partnerBookings(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+    statuses: $statuses
+  ) {
+    items {
+      addressMoreInfo
+      code
+      createdAt
+      deletedAt
+      description
+      id
+      latitude
+      longitude
+      mapAddress
+      medias {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      partner {
+        addressMoreInfo
+        avatarId
+        bank
+        birthday
+        cardNumber
+        citizenId
+        countProduct
+        countTechnician
+        createdAt
+        deletedAt
+        description
+        email
+        fullname
+        hotline
+        id
+        isActive
+        isAdmin
+        isApproved
+        latitude
+        longitude
+        mapAddress
+        menus
+        parentId
+        phone
+        star
+        storeStar
+        suggestionPoint
+        type
+        updatedAt
+      }
+      partnerId
+      problemTexts
+      problems {
+        createdAt
+        deletedAt
+        id
+        isActive
+        name
+        type
+        updatedAt
+      }
+      quotationAccepted {
+        bookingId
+        createdAt
+        deletedAt
+        diagnosisFee
+        diagnosisNote
+        estimatedCompleteAt
+        id
+        operatingNumber
+        operatingUnit
+        rejectReasons
+        repairFee
+        status
+        technicianId
+        total
+        transportFee
+        updatedAt
+        userId
+      }
+      scheduleReason
+      scheduleTime
+      settlementAccepted {
+        bookingId
+        createdAt
+        deletedAt
+        discount
+        id
+        invoiceId
+        quotationId
+        status
+        technicianId
+        total
+        updatedAt
+        userId
+        vatTax
+      }
+      status
+      statusDetail {
+        bookingId
+        createdAt
+        id
+        note
+        partnerId
+        scheduleReason
+        scheduleTime
+        status
+        userId
+      }
+      technician {
+        addressMoreInfo
+        avatarId
+        bank
+        birthday
+        cardNumber
+        citizenId
+        countProduct
+        countTechnician
+        createdAt
+        deletedAt
+        description
+        email
+        fullname
+        hotline
+        id
+        isActive
+        isAdmin
+        isApproved
+        latitude
+        longitude
+        mapAddress
+        menus
+        parentId
+        phone
+        star
+        storeStar
+        suggestionPoint
+        type
+        updatedAt
+      }
+      technicianCanReviewUser
+      technicianId
+      technicianReviewUser {
+        assessorId
+        bookingId
+        comment
+        createdAt
+        deletedAt
+        id
+        orderId
+        personEvaluatedId
+        productId
+        star
+        type
+        updatedAt
+      }
+      transportDistance
+      transportDuration
+      transportFee
+      updatedAt
+      user {
+        address
+        avatarId
+        birthday
+        certificate
+        createdAt
+        deletedAt
+        email
+        fullname
+        id
+        isActive
+        numberBooking
+        numberMaintenance
+        numberOrder
+        phone
+        star
+        totalBookings
+        totalMaintenanceRequests
+        totalOrders
+        totalPayment
+        totalSpending
+        updatedAt
+      }
+      userCanReviewAgency
+      userCanReviewTechnician
+      userId
+      userReviewAgency {
+        assessorId
+        bookingId
+        comment
+        createdAt
+        deletedAt
+        id
+        orderId
+        personEvaluatedId
+        productId
+        star
+        type
+        updatedAt
+      }
+      userReviewTechnician {
+        assessorId
+        bookingId
+        comment
+        createdAt
+        deletedAt
+        id
+        orderId
+        personEvaluatedId
+        productId
+        star
+        type
+        updatedAt
+      }
+      vehicle {
+        addressMoreInfo
+        avatarId
+        createdAt
+        deletedAt
+        detail
+        hidden
+        id
+        latitude
+        longitude
+        mapAddress
+        name
+        operatingNumber
+        operatingUnit
+        ordinalNumber
+        serialNumber
+        updatedAt
+        userId
+        vehicleRegistrationPlate
+        vinNumber
+        yearOfManufacture
+      }
+      vehicleId
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

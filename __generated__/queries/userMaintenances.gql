@@ -1,0 +1,112 @@
+query userMaintenances(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+  $statuses: [MaintenanceStatusEnum!]
+) {
+  userMaintenances(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+    statuses: $statuses
+  ) {
+    items {
+      accessories {
+        accessoryId
+        createdAt
+        id
+        isAvailable
+        maintenanceId
+        name
+        quantity
+        unit
+      }
+      addressMoreInfo
+      code
+      createdAt
+      deletedAt
+      endDate
+      id
+      isActive
+      latitude
+      longitude
+      maintenanceLevel
+      mapAddress
+      note
+      routineLevel
+      startDate
+      status
+      statusDetail {
+        createdAt
+        id
+        maintenanceId
+        note
+        status
+        userId
+      }
+      updatedAt
+      user {
+        address
+        avatarId
+        birthday
+        certificate
+        createdAt
+        deletedAt
+        email
+        fullname
+        id
+        isActive
+        numberBooking
+        numberMaintenance
+        numberOrder
+        phone
+        star
+        totalBookings
+        totalMaintenanceRequests
+        totalOrders
+        totalPayment
+        totalSpending
+        updatedAt
+      }
+      userId
+      vehicle {
+        addressMoreInfo
+        avatarId
+        createdAt
+        deletedAt
+        detail
+        hidden
+        id
+        latitude
+        longitude
+        mapAddress
+        name
+        operatingNumber
+        operatingUnit
+        ordinalNumber
+        serialNumber
+        updatedAt
+        userId
+        vehicleRegistrationPlate
+        vinNumber
+        yearOfManufacture
+      }
+      vehicleId
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

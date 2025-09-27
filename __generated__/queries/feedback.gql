@@ -1,0 +1,94 @@
+query feedback($id: String!) {
+  feedback(id: $id) {
+    content
+    createdAt
+    feedbackMedias {
+      Feedback {
+        content
+        createdAt
+        feedbackType
+        id
+        status
+        updatedAt
+        updatedStatusAt
+      }
+      id
+      media {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      ordinal
+    }
+    feedbackType
+    id
+    status
+    updatedAt
+    updatedStatusAt
+    user {
+      address
+      avatar {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      avatarId
+      birthday
+      certificate
+      createdAt
+      deletedAt
+      email
+      fullname
+      id
+      isActive
+      numberBooking
+      numberMaintenance
+      numberOrder
+      phone
+      star
+      totalBookings
+      totalMaintenanceRequests
+      totalOrders
+      totalPayment
+      totalSpending
+      updatedAt
+      userAddress {
+        addressDetail
+        addressName
+        contactName
+        contactPhone
+        createdAt
+        deletedAt
+        id
+        isDefault
+        latitude
+        longitude
+        mapAddress
+        updatedAt
+        userId
+      }
+    }
+  }
+}

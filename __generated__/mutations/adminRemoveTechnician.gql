@@ -1,0 +1,3 @@
+mutation adminRemoveTechnician($id: String!) {
+  adminRemoveTechnician(id: $id)
+}

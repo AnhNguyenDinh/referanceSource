@@ -1,0 +1,3 @@
+query checkProductOrdinalNumberExist($id: String, $ordinalNumber: Float!) {
+  checkProductOrdinalNumberExist(id: $id, ordinalNumber: $ordinalNumber)
+}

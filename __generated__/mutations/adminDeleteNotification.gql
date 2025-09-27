@@ -1,0 +1,3 @@
+mutation adminDeleteNotification($input: DeleteNotificationInput!) {
+  adminDeleteNotification(input: $input)
+}

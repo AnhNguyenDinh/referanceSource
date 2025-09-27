@@ -1,0 +1,11 @@
+query category($id: String!) {
+  category(id: $id) {
+    createdAt
+    deletedAt
+    id
+    isActive
+    name
+    type
+    updatedAt
+  }
+}

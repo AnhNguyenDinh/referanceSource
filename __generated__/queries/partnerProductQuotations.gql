@@ -1,0 +1,147 @@
+query partnerProductQuotations(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isAdmin: Boolean
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $partnerId: String
+  $productId: String
+  $search: String
+  $sort: SortInput
+  $status: ProductQuotationStatusEnum
+  $userId: String
+) {
+  partnerProductQuotations(
+    filters: $filters
+    isActive: $isActive
+    isAdmin: $isAdmin
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    partnerId: $partnerId
+    productId: $productId
+    search: $search
+    sort: $sort
+    status: $status
+    userId: $userId
+  ) {
+    items {
+      createdAt
+      deletedAt
+      detail
+      id
+      medias {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      partner {
+        addressMoreInfo
+        avatarId
+        bank
+        birthday
+        cardNumber
+        citizenId
+        countProduct
+        countTechnician
+        createdAt
+        deletedAt
+        description
+        email
+        fullname
+        hotline
+        id
+        isActive
+        isAdmin
+        isApproved
+        latitude
+        longitude
+        mapAddress
+        menus
+        parentId
+        phone
+        star
+        storeStar
+        suggestionPoint
+        type
+        updatedAt
+      }
+      partnerId
+      product {
+        avatarId
+        createdAt
+        deletedAt
+        descriptionImageIds
+        detail
+        id
+        isActive
+        isFavorite
+        isFixedCost
+        isNew
+        name
+        operatingNumber
+        operatingUnit
+        ordinalNumber
+        partNumber
+        partnerId
+        quantity
+        serialNumber
+        star
+        type
+        unitPrice
+        updatedAt
+        vehicleRegistrationPlate
+        vinNumber
+        yearOfManufacture
+      }
+      productId
+      quantity
+      response
+      status
+      updatedAt
+      user {
+        address
+        avatarId
+        birthday
+        certificate
+        createdAt
+        deletedAt
+        email
+        fullname
+        id
+        isActive
+        numberBooking
+        numberMaintenance
+        numberOrder
+        phone
+        star
+        totalBookings
+        totalMaintenanceRequests
+        totalOrders
+        totalPayment
+        totalSpending
+        updatedAt
+      }
+      userId
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

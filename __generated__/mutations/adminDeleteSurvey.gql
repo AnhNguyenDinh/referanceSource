@@ -1,0 +1,3 @@
+mutation adminDeleteSurvey($input: DeleteSurveyInput!) {
+  adminDeleteSurvey(input: $input)
+}

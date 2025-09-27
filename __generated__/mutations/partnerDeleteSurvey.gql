@@ -1,0 +1,3 @@
+mutation partnerDeleteSurvey($input: DeleteSurveyInput!) {
+  partnerDeleteSurvey(input: $input)
+}

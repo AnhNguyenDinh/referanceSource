@@ -1,0 +1,90 @@
+query partnerGetCourses(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $isOwner: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+) {
+  partnerGetCourses(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    isOwner: $isOwner
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+  ) {
+    items {
+      address
+      banner {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      bannerId
+      content
+      createdAt
+      deletedAt
+      document {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      documentId
+      endDate
+      enrolledCount
+      enrollments {
+        courseId
+        createdAt
+        deletedAt
+        id
+        partnerId
+        updatedAt
+      }
+      id
+      isActive
+      isEnrolled
+      name
+      openDate
+      price
+      startDate
+      teacher
+      teacherDescription
+      updatedAt
+      videoUrl
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

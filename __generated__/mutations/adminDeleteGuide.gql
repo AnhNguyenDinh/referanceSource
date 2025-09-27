@@ -1,0 +1,3 @@
+mutation adminDeleteGuide($input: DeleteGuideInput!) {
+  adminDeleteGuide(input: $input)
+}

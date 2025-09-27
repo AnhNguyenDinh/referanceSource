@@ -1,0 +1,10 @@
+{
+  "version": {
+    "ios": {
+      "buildNumber": "0.0.180"
+    },
+    "android": {
+      "versionCode": 180
+    }
+  }
+}

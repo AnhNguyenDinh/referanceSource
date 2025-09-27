@@ -1,0 +1,94 @@
+query adminGetCourses(
+  $endDate: String
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $openDate: DateTime
+  $page: Int
+  $search: String
+  $sort: SortInput
+  $startDate: String
+) {
+  adminGetCourses(
+    endDate: $endDate
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    openDate: $openDate
+    page: $page
+    search: $search
+    sort: $sort
+    startDate: $startDate
+  ) {
+    items {
+      address
+      banner {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      bannerId
+      content
+      createdAt
+      deletedAt
+      document {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      documentId
+      endDate
+      enrolledCount
+      enrollments {
+        courseId
+        createdAt
+        deletedAt
+        id
+        partnerId
+        updatedAt
+      }
+      id
+      isActive
+      isEnrolled
+      name
+      openDate
+      price
+      startDate
+      teacher
+      teacherDescription
+      updatedAt
+      videoUrl
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

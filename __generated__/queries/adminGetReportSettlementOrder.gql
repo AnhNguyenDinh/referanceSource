@@ -1,0 +1,9 @@
+query adminGetReportSettlementOrder($partnerId: String!, $periodType: PeriodTypeEnum!) {
+  adminGetReportSettlementOrder(partnerId: $partnerId, periodType: $periodType) {
+    histories {
+      date
+      revenue
+    }
+    totalRevenue
+  }
+}

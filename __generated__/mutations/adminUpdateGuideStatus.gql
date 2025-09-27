@@ -1,0 +1,30 @@
+mutation adminUpdateGuideStatus($input: UpdateGuideStatusInput!) {
+  adminUpdateGuideStatus(input: $input) {
+    createdAt
+    deletedAt
+    description
+    id
+    instructions {
+      createdAt
+      deletedAt
+      description
+      guide {
+        createdAt
+        deletedAt
+        description
+        id
+        isActive
+        name
+        updatedAt
+      }
+      guideId
+      id
+      isActive
+      name
+      updatedAt
+    }
+    isActive
+    name
+    updatedAt
+  }
+}

@@ -1,0 +1,3 @@
+mutation adminRespondProductQuotation($input: RespondProductQuotationInput!) {
+  adminRespondProductQuotation(input: $input)
+}

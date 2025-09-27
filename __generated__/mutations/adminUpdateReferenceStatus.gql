@@ -1,0 +1,46 @@
+mutation adminUpdateReferenceStatus($input: UpdateReferenceStatusInput!) {
+  adminUpdateReferenceStatus(input: $input) {
+    createdAt
+    deletedAt
+    description
+    documents {
+      createdAt
+      deletedAt
+      fileIds
+      files {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      id
+      isActive
+      name
+      reference {
+        createdAt
+        deletedAt
+        description
+        id
+        isActive
+        name
+        updatedAt
+      }
+      referenceId
+      updatedAt
+    }
+    id
+    isActive
+    name
+    updatedAt
+  }
+}

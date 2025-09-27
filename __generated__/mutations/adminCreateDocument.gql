@@ -1,0 +1,3 @@
+mutation adminCreateDocument($input: CreateDocumentInput!) {
+  adminCreateDocument(input: $input)
+}

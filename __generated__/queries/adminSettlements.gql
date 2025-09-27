@@ -1,0 +1,152 @@
+query adminSettlements(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+  $statuses: [SettlementStatusEnum!]
+) {
+  adminSettlements(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+    statuses: $statuses
+  ) {
+    items {
+      additionalFees {
+        amount
+        createdAt
+        deletedAt
+        id
+        name
+        settlementId
+        updatedAt
+      }
+      booking {
+        addressMoreInfo
+        code
+        createdAt
+        deletedAt
+        description
+        id
+        latitude
+        longitude
+        mapAddress
+        partnerId
+        problemTexts
+        scheduleReason
+        scheduleTime
+        status
+        technicianCanReviewUser
+        technicianId
+        transportDistance
+        transportDuration
+        transportFee
+        updatedAt
+        userCanReviewAgency
+        userCanReviewTechnician
+        userId
+        vehicleId
+      }
+      bookingId
+      createdAt
+      deletedAt
+      discount
+      id
+      invoiceId
+      quotation {
+        bookingId
+        createdAt
+        deletedAt
+        diagnosisFee
+        diagnosisNote
+        estimatedCompleteAt
+        id
+        operatingNumber
+        operatingUnit
+        rejectReasons
+        repairFee
+        status
+        technicianId
+        total
+        transportFee
+        updatedAt
+        userId
+      }
+      quotationId
+      status
+      technician {
+        addressMoreInfo
+        avatarId
+        bank
+        birthday
+        cardNumber
+        citizenId
+        countProduct
+        countTechnician
+        createdAt
+        deletedAt
+        description
+        email
+        fullname
+        hotline
+        id
+        isActive
+        isAdmin
+        isApproved
+        latitude
+        longitude
+        mapAddress
+        menus
+        parentId
+        phone
+        star
+        storeStar
+        suggestionPoint
+        type
+        updatedAt
+      }
+      technicianId
+      total
+      updatedAt
+      user {
+        address
+        avatarId
+        birthday
+        certificate
+        createdAt
+        deletedAt
+        email
+        fullname
+        id
+        isActive
+        numberBooking
+        numberMaintenance
+        numberOrder
+        phone
+        star
+        totalBookings
+        totalMaintenanceRequests
+        totalOrders
+        totalPayment
+        totalSpending
+        updatedAt
+      }
+      userId
+      vatTax
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

@@ -1,0 +1,9 @@
+mutation updateUserSetting($input: UpdateUserSettingInput!) {
+  updateUserSetting(input: $input) {
+    allowAccessCamera
+    allowAccessPhoto
+    allowLocation
+    allowNotification
+    id
+  }
+}

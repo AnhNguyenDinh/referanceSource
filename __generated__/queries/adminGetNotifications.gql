@@ -1,0 +1,198 @@
+query adminGetNotifications(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+) {
+  adminGetNotifications(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+  ) {
+    items {
+      body
+      booking {
+        addressMoreInfo
+        code
+        createdAt
+        deletedAt
+        description
+        id
+        latitude
+        longitude
+        mapAddress
+        partnerId
+        problemTexts
+        scheduleReason
+        scheduleTime
+        status
+        technicianCanReviewUser
+        technicianId
+        transportDistance
+        transportDuration
+        transportFee
+        updatedAt
+        userCanReviewAgency
+        userCanReviewTechnician
+        userId
+        vehicleId
+      }
+      createdAt
+      deletedAt
+      executeTime
+      id
+      isActive
+      maintenance {
+        addressMoreInfo
+        code
+        createdAt
+        deletedAt
+        endDate
+        id
+        isActive
+        latitude
+        longitude
+        maintenanceLevel
+        mapAddress
+        note
+        routineLevel
+        startDate
+        status
+        updatedAt
+        userId
+        vehicleId
+      }
+      objectId
+      objectType
+      seen
+      sourceId
+      sourcePartner {
+        addressMoreInfo
+        avatarId
+        bank
+        birthday
+        cardNumber
+        citizenId
+        countProduct
+        countTechnician
+        createdAt
+        deletedAt
+        description
+        email
+        fullname
+        hotline
+        id
+        isActive
+        isAdmin
+        isApproved
+        latitude
+        longitude
+        mapAddress
+        menus
+        parentId
+        phone
+        star
+        storeStar
+        suggestionPoint
+        type
+        updatedAt
+      }
+      sourceType
+      sourceUser {
+        address
+        avatarId
+        birthday
+        certificate
+        createdAt
+        deletedAt
+        email
+        fullname
+        id
+        isActive
+        numberBooking
+        numberMaintenance
+        numberOrder
+        phone
+        star
+        totalBookings
+        totalMaintenanceRequests
+        totalOrders
+        totalPayment
+        totalSpending
+        updatedAt
+      }
+      targetId
+      targetPartner {
+        addressMoreInfo
+        avatarId
+        bank
+        birthday
+        cardNumber
+        citizenId
+        countProduct
+        countTechnician
+        createdAt
+        deletedAt
+        description
+        email
+        fullname
+        hotline
+        id
+        isActive
+        isAdmin
+        isApproved
+        latitude
+        longitude
+        mapAddress
+        menus
+        parentId
+        phone
+        star
+        storeStar
+        suggestionPoint
+        type
+        updatedAt
+      }
+      targetType
+      targetUser {
+        address
+        avatarId
+        birthday
+        certificate
+        createdAt
+        deletedAt
+        email
+        fullname
+        id
+        isActive
+        numberBooking
+        numberMaintenance
+        numberOrder
+        phone
+        star
+        totalBookings
+        totalMaintenanceRequests
+        totalOrders
+        totalPayment
+        totalSpending
+        updatedAt
+      }
+      title
+      updatedAt
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

@@ -1,0 +1,9 @@
+query listTodo {
+  listTodo {
+    createdAt
+    id
+    isActive
+    title
+    updatedAt
+  }
+}

@@ -1,0 +1,3 @@
+mutation adminDeleteCourse($input: DeleteCourseInput!) {
+  adminDeleteCourse(input: $input)
+}

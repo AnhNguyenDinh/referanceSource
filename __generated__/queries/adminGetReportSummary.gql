@@ -1,0 +1,7 @@
+query adminGetReportSummary($partnerId: String!, $periodType: PeriodTypeEnum!) {
+  adminGetReportSummary(partnerId: $partnerId, periodType: $periodType) {
+    totalRevenue
+    totalRevenueOrder
+    totalRevenueSettlement
+  }
+}

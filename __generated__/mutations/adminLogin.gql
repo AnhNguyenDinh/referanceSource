@@ -1,0 +1,36 @@
+mutation adminLogin($input: AdminLoginInput!) {
+  adminLogin(input: $input) {
+    accessToken
+    admin {
+      address
+      addressMoreInfo
+      avatar {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      avatarId
+      birthday
+      createdAt
+      deletedAt
+      email
+      fullname
+      id
+      isActive
+      type
+      updatedAt
+    }
+    refreshToken
+  }
+}

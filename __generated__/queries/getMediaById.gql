@@ -1,0 +1,18 @@
+query getMediaById($id: String!) {
+  getMediaById(id: $id) {
+    createdAt
+    fileSize
+    fullOriginalUrl
+    fullThumbUrl
+    id
+    isDeleted
+    mimeType
+    name
+    originalUrl
+    ownerId
+    thumbUrl
+    type
+    updatedAt
+    videoUrl
+  }
+}

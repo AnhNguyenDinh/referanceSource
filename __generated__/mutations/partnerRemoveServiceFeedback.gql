@@ -1,0 +1,3 @@
+mutation partnerRemoveServiceFeedback($id: String!) {
+  partnerRemoveServiceFeedback(id: $id)
+}
