@@ -1,0 +1,63 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "root": true,
+  "extends": [
+    "@react-native-community",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-native/all",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/recommended",
+    "prettier"
+  ],
+  "plugins": ["react", "react-native", "react-hooks", "@typescript-eslint", "prettier", "import"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unsafe-argument": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/unbound-method": "off",
+    "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
+    "react-native/no-raw-text": "off",
+    "react/display-name": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/no-unstable-nested-components": "off",
+    "react-native/no-single-element-style-arrays": "off",
+    "react-native/split-platform-components": "off",
+    "react/no-unescaped-entities": "off",
+    "import/namespace": "off",
+    "import/no-unresolved": "off",
+    "import/order": ["error", { "newlines-between": "always" }],
+    "import/no-default-export": "error",
+    "import/named": "off",
+    "import/no-named-as-default-member": "off",
+    "import/no-named-as-default": "off",
+    "import/no-cycle": "error",
+    "react-hooks/exhaustive-deps": "error"
+  },
+  "overrides": [
+    {
+      "files": ["app/**"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ]
+}
